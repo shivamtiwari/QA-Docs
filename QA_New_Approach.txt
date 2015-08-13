@@ -1,0 +1,33 @@
+8 June, 2015
+
+1. Discuss about new strategy.
+2. Collect all existing documents and resources.
+3. Bird eye view what exactly they want and start up. 
+
+MOM:
+1. Detail Documents
+2. Test cases
+3. Smoke Test cases
+4. Sanity Test cases
+5. Detail Analysis Documents:
+	List of products in scope.
+	Information about each product.
+	Test to perform on products.
+	Type of testing perform on products in QA cycle.
+	Estimations for automation QA activities (Milestones with delta items).
+	
+	
+Type of current products:
+1. LOT
+2. JLTB
+3. Ninja (Multiple Micro sites)
+4. PMM
+5. Isango
+6. Mobile Isango version
+
+Available TestCases:
+
+1. Smoke Test cases for Isango
+2. Regression Test cases for Isango
+3. Product Over view document.
+

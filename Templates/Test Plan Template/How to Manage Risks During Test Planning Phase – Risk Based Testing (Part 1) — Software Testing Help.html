@@ -1,0 +1,840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>  How to Manage Risks During Test Planning Phase – Risk Based Testing (Part 1) &#8212; Software Testing Help</title>
+<link rel="shortcut icon" href="http://cdn2.softwaretestinghelp.com/wp-content/qa/uploads/2010/09/favicon.ico">
+<meta name="verify-v1" content="GjmOKiRRPdSL1t8bK5ylftL2GRapufKXM/i8iyslNdY=" />
+<meta name="msvalidate.01" content="618BA2329B50470CA4164949B6C5C4F6" />
+<META name="y_key" content="a43fd571b9543353" />
+<meta name='yandex-verification' content='571b0e8d1427c2cf' />
+<meta name="generator" content="WordPress" /> <!-- leave this for stats -->
+
+	<link rel="stylesheet" href="http://cdn2.softwaretestinghelp.com/wp-content/themes/default/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://cdn.softwaretestinghelp.com/wp-content/themes/default/custom.css" type="text/css" media="screen" />
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://cdn.softwaretestinghelp.com/wp-content/themes/default/ie7.css" />
+	<![endif]-->
+	<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="http://cdn.softwaretestinghelp.com/wp-content/themes/default/ie6.css" />
+	<![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="Software Testing Help RSS Feed" href="http://www.softwaretestinghelp.com/feed/" />
+	<link rel="pingback" href="http://www.softwaretestinghelp.com/xmlrpc.php" />
+
+	
+<!-- All in One SEO Pack 2.2.7 by Michael Torbert of Semper Fi Web Design[-1,-1] -->
+<link rel="author" href="http://plus.google.com/107564814558262997658" />
+
+<link rel="canonical" href="http://www.softwaretestinghelp.com/risk-management-during-test-planning-risk-based-testing/" />
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="Software Testing Help &raquo; How to Manage Risks During Test Planning Phase – Risk Based Testing (Part 1) Comments Feed" href="http://www.softwaretestinghelp.com/risk-management-during-test-planning-risk-based-testing/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.softwaretestinghelp.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.2"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='yarppWidgetCss-css'  href='http://cdn.softwaretestinghelp.com/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=4.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='mtq_CoreStyleSheets-css'  href='http://cdn.softwaretestinghelp.com/wp-content/plugins/mtouch-quiz/mtq_core_style.css?ver=3.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='mtq_ThemeStyleSheets-css'  href='http://cdn2.softwaretestinghelp.com/wp-content/plugins/mtouch-quiz/mtq_theme_style.css?ver=3.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://cdn.softwaretestinghelp.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='digg-digg-css'  href='http://cdn2.softwaretestinghelp.com/wp-content/plugins/digg-digg/css/diggdigg-style.css?ver=5.3.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp125style-css'  href='http://cdn.softwaretestinghelp.com/wp-content/plugins/wp125/wp125.css?ver=4.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='http://cdn.softwaretestinghelp.com/wp-content/plugins/tablepress/css/default.min.css?ver=1.6' type='text/css' media='all' />
+<script type='text/javascript' src='http://cdn.softwaretestinghelp.com/wp-includes/js/jquery/jquery.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://cdn.softwaretestinghelp.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://cdn.softwaretestinghelp.com/wp-content/plugins/mtouch-quiz/script.js?ver=3.1.2'></script>
+<script type='text/javascript' src='http://cdn2.softwaretestinghelp.com/wp-content/plugins/optin-monster/assets/js/api.js?ver=2.1.7'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.softwaretestinghelp.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cdn.softwaretestinghelp.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Test Data Management Techniques and Best Practices (Part 2)' href='http://www.softwaretestinghelp.com/test-data-management-techniques/' />
+<link rel='next' title='Risk Management at Test Execution Phase Explained with Practical Example (Part 2)' href='http://www.softwaretestinghelp.com/risk-management-at-test-execution-phase/' />
+<meta name="generator" content="WordPress 4.2.2" />
+<link rel='shortlink' href='http://www.softwaretestinghelp.com/?p=3665' />
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<link href="https://plus.google.com/111004776156228358214" rel="publisher" /><script type="text/javascript">
+window.___gcfg = {lang: 'en'};
+(function() 
+{var po = document.createElement("script");
+po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(po, s);
+})();</script>
+
+<meta name="alexaVerifyID" content="d5cRPjoFM_RcTqhLb22fb3rSue8" />
+<meta name="google-site-verification" content="maq7Nb1jQBn63uYSZAaSSWQ6ozNsRTitctvZvpdcUeg" />
+</head>
+
+<body class="custom">
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds.com Ad Code -->
+
+<link href="https://plus.google.com/111004776156228358214" rel="publisher" />
+
+<div id="header">
+	<div id="logo">
+		<a href="http://www.softwaretestinghelp.com" title="Software Testing Help">Software Testing Help</a>
+			
+		<p id="tagline">Software Testing Complete Guide</p>
+		
+<div style="display:block;float:right;margin: 20px 10px 0px 0px;">
+<form action="http://www.google.com" id="cse-search-box" target="_blank">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-4494420772031453:2717605672" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="30" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+</div>	
+
+</div>
+</div>
+	
+<div id="container">
+<div id="nav">
+		<ul>
+					</ul>
+	</div>
+	<div id="content_box">
+		
+		<div id="content" class="posts single">
+			
+				
+			
+<div class="navigation">
+	<p>&larr; <a href="http://www.softwaretestinghelp.com/test-data-management-techniques/" rel="prev">Test Data Management Techniques and Best Practices (Part 2)</a></p>
+	<p class="next"><a href="http://www.softwaretestinghelp.com/risk-management-at-test-execution-phase/" rel="next">Risk Management at Test Execution Phase Explained with Practical Example (Part 2)</a> &rarr;</p>
+</div>
+
+			
+			<h1>How to Manage Risks During Test Planning Phase – Risk Based Testing (Part 1)</h1>
+			<p class="post_date">Posted In | <a href="http://www.softwaretestinghelp.com/category/test-strategy/" rel="category tag">Test strategy</a>, <a href="http://www.softwaretestinghelp.com/category/testing-methodologies/" rel="category tag">Testing Methodologies</a><time datetime="2015-02-12T19:07:43+00:00" itemprop="dateModified"> | Last Updated: "February 12, 2015" </time> </p>
+			<div class="entry">
+
+
+				<p><strong><strong>Risk Management During Test Planning &#8211; Risk Based Testing:</strong><br />
+</strong></p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:10px 0 10px 0;text-align:center;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-4494420772031453";
+    google_ad_slot = "9090371999";
+    google_ad_width = 336;
+    google_ad_height = 280;
+</script>
+<!-- STH post 336x280 -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<p>Life is full of risks, and so is a software project. Anything can go wrong anytime. We are always on our toes to make things right – but what about making sure that nothing goes wrong and that when it does we know exactly what to do? Enter Risk management – this is a portion of a software testing project that prepares us to prevent, understand, find and get over risks.</p>
+<p>A risk is simply a problem that is likely to occur and when it does occur, will cause a loss.</p>
+<p>The loss could be anything- money, time, effort or a compromise in quality. Loss is never good. No matter how much of a spin we give it, <strong><span id="more-3665"></span></strong>it’s not positive- and never will be. Therefore <a href="http://en.wikipedia.org/wiki/Risk_management" target="_blank">Risk management</a> is an integral part of software projects to make sure we handle risks and prevent/reduce losses.</p>
+<p><a href="http://cdn2.softwaretestinghelp.com/wp-content/qa/uploads/2014/05/how-to-manage-risks-during-test-planning.jpg"><img class="alignnone size-full wp-image-3674" src="http://cdn2.softwaretestinghelp.com/wp-content/qa/uploads/2014/05/how-to-manage-risks-during-test-planning.jpg" alt="how to manage risks during test planning" width="485" height="255" /></a></p>
+<p><span style="text-decoration: underline;"><em>Risk Based Testing</em></span><em>:</em> Since we are a QA community let us stay specific to risks and the process related to it in our QA world exclusively. Risks are assessed and managed roughly in 2 phases of our <a title="What is STLC" href="http://www.softwaretestinghelp.com/what-is-software-testing-life-cycle-stlc/">Software Test life cycle</a>. STLC can be categorized into 3 phases -Test planning, Test designing and Test execution.</p>
+<p><span style="text-decoration: underline;"><strong>The risk management process occurs twice, during:</strong></span></p>
+<ol>
+<li>Test planning</li>
+<li>Test case design(end) or sometimes in the test execution phase</li>
+</ol>
+<p><em>It is mandatory in case 1 but with case 2 it is more of a ‘need-basis’ situation. </em></p>
+<p><a href="http://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2014/05/risk-based-testing-process.jpg"><img class="alignnone wp-image-3672" src="http://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2014/05/risk-based-testing-process.jpg" alt="risk based testing process" width="485" height="317" /></a></p>
+<p><strong>Two part article series:</strong></p>
+<p>Even though the underlying process is the same, the <a title="types of risks" href="http://www.softwaretestinghelp.com/types-of-risks-in-software-projects/">types of risks</a> addressed in both these areas are completely different. In order to do justice to them individually, we are going to handle them differently as a two part series.</p>
+<p><strong>Today’s article is going to be about “<span style="text-decoration: underline;">Risk Management during test planning</span>”.</strong></p>
+<p><span style="text-decoration: underline;"><strong>Risk Management Process</strong></span></p>
+<p>The generic process for Risk management involves 3 important stages:</p>
+<ol>
+<li>Risk identification</li>
+<li>Risk impact analysis</li>
+<li>Risk mitigation</li>
+</ol>
+<h3><span style="text-decoration: underline;"><strong>Risk identification</strong></span></h3>
+<p>As it is said, the first step to solving a problem is identifying it. This stage involves making a list of everything that might potentially come up and disrupt the normal flow of events.</p>
+<p><strong>The main outcome of this step is: a list of risks.</strong></p>
+<p>This risk based testing step is commonly led by the QA lead/Manager/representative. However, the lead alone will not be able to come up the entire list- the entire QA team’s input makes a huge impact. We can say this is a collective activity led by the QA lead.</p>
+<p>Also, the risks that are identified during the Test planning phase are more ‘managerial’ in orientation- meaning, we are going to look at anything that might impact the QA project’s schedule, effort, budget, infrastructure changes, etc. The focus here is not the AUT, but the way the QA phase will go on.</p>
+<p><strong>Risks During Test Planning &#8211; Risk Based Testing Examples</strong></p>
+<p>The following is a sample list of risks that might be listed during test planning phase. Please note, that the AUT and its functionality is not the focus here.</p>
+<p><strong>#1.</strong> Testing schedule is tight. If the start of the testing is delayed due to design tasks, the test cannot be extended beyond the UAT scheduled start date.</p>
+<p><strong>#2.</strong> Not enough resources, resources on boarding too late (process takes around 15 days.)</p>
+<p><strong>#3.</strong> Defects are found at a late stage of the cycle or at a late cycle; defects discovered late are most likely be due to unclear specifications and are time consuming to resolve.</p>
+<p><strong>#4.</strong> Scope not defined completely defined</p>
+<p><strong>#5.</strong> Natural disasters</p>
+<p><strong>#6.</strong> Non-availability of Independent <a title="Test environment" href="http://www.softwaretestinghelp.com/test-bed-test-environment-management-best-practices/" target="_blank">Test environment</a> and accessibility</p>
+<p><strong>#7.</strong> Delayed Testing Due To new Issues</p>
+<p>At this point, you can choose to be as thorough as you would like, depending on the amount of time available.</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<p>------------<br />
+<script type="text/javascript">
+    google_ad_client = "ca-pub-4494420772031453";
+    google_ad_slot = "6790247997";
+    google_ad_width = 336;
+    google_ad_height = 280;
+</script>
+<!-- STH midpost 336x280 -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+</div>
+
+<p><strong><em>Once, all the risks are listed, we progress to Risk assessment/Risk impact analysis.</em></strong></p>
+<h3><span style="text-decoration: underline;"><strong>Risk assessment/Risk impact analysis</strong></span></h3>
+<p><em><strong>Is your Risk Analysis something like this?</strong></em> <img src="http://cdn2.softwaretestinghelp.com/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p><strong><img class="alignnone size-full wp-image-3673" src="http://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2014/05/risk-management-cartoon.jpg" alt="risk management cartoon" width="485" height="233" /></strong></p>
+<p><strong>Risk Analysis in software testing</strong>: All the risks are quantified and prioritized in this step. Every risk’s probability (the chance of occurrence) and impact (amount of loss that it would cause when this risk materializes) are determined systematically.</p>
+<p><strong>High &#8211; medium &#8211; low</strong>, values are assigned to both the probability and impact for each risk. The risks with “high” probability and “High” impact are taken care of first and then the order follows.</p>
+<p><strong>Risk impact analysis table:</strong></p>
+<p>Following these steps, the risk impact analysis table for the above risks listed would look something like this (all values are hypothetical and only for understanding purposes):</p>
+
+<table id="tablepress-11" class="tablepress tablepress-id-11">
+<thead>
+<tr class="row-1 odd">
+	<th class="column-1">Risk</th><th class="column-2">Probability</th><th class="column-3">Impact</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even">
+	<td class="column-1">1. Testing schedule is tight. If the start of the testing is delayed due to design tasks, the test cannot be extended beyond the UAT scheduled start date.</td><td class="column-2">High</td><td class="column-3">High</td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1">2. Not enough resources, resources on boarding too late (process takes around 15 days.)</td><td class="column-2">Medium</td><td class="column-3">High</td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1">3. Defects are found at a late stage of the cycle or at a late cycle; defects discovered late are most likely be due to unclear specifications and are time consuming to resolve.</td><td class="column-2">Medium</td><td class="column-3">High</td>
+</tr>
+<tr class="row-5 odd">
+	<td class="column-1">4. Scope not defined completely defined</td><td class="column-2">Medium</td><td class="column-3">Medium</td>
+</tr>
+<tr class="row-6 even">
+	<td class="column-1">5. Natural disasters</td><td class="column-2">Low</td><td class="column-3">Medium</td>
+</tr>
+<tr class="row-7 odd">
+	<td class="column-1">6. Non-availability of Independent Test environment and accessibility</td><td class="column-2">Medium</td><td class="column-3">High</td>
+</tr>
+<tr class="row-8 even">
+	<td class="column-1">7. Delayed Testing Due To new Issues</td><td class="column-2">Medium</td><td class="column-3">High</td>
+</tr>
+</tbody>
+</table>
+<!-- #tablepress-11 from cache -->
+<h3><span style="text-decoration: underline;">Risk Mitigation</span></h3>
+<p>The final step in this Risk Based Testing (RBT) process is to find solutions to plan how to handle each one of these situations. These plans can differ from company to company, project to project and even person to person.</p>
+<p><strong>Risk Mitigation Techniques:</strong></p>
+<p><strong>Here is an example of what the Risk’s table transforms into when this phase is complete:</strong></p>
+
+<table id="tablepress-12" class="tablepress tablepress-id-12">
+<thead>
+<tr class="row-1 odd">
+	<th class="column-1">Risk</th><th class="column-2">Prob.</th><th class="column-3">Impact</th><th class="column-4">Mitigation Plan</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even">
+	<td class="column-1">SCHEDULE<br />
+Testing schedule is tight. If the start of the testing is delayed due to design tasks, the test cannot be extended beyond the UAT scheduled start date. <br />
+</td><td class="column-2">High</td><td class="column-3">High</td><td class="column-4">•	The testing team can control the preparation tasks (in advance) and the early communication with involved parties. <br />
+•	Some buffer has been added to the schedule for contingencies, although not as much as best practices advise. <br />
+</td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1">RESOURCES<br />
+Not enough resources, resources on boarding too late (process takes around 15 days.<br />
+</td><td class="column-2">Medium</td><td class="column-3">High</td><td class="column-4">Holidays and vacation have been estimated and built into the schedule; deviations from the estimation could derive in delays in the testing.  </td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1">DEFECTS<br />
+Defects are found at a late stage of the cycle or at a late cycle; defects discovered late are most likely be due to unclear specifications and are time consuming to resolve.  <br />
+</td><td class="column-2">Medium</td><td class="column-3">High</td><td class="column-4">Defect management plan is in place to ensure prompt communication and fixing of issues. </td>
+</tr>
+<tr class="row-5 odd">
+	<td class="column-1">SCOPE<br />
+Scope completely defined<br />
+</td><td class="column-2">Medium</td><td class="column-3">Medium</td><td class="column-4">Scope is well defined but the changes are in the functionality are not yet finalized or keep on changing. </td>
+</tr>
+<tr class="row-6 even">
+	<td class="column-1">Natural disasters</td><td class="column-2">Low</td><td class="column-3">Medium</td><td class="column-4">Teams and responsibilities have been spread to two different geographic areas. In a catastrophic event in one of the areas, there will resources in the other areas needed to continue (although at a slower pace) the testing activities.</td>
+</tr>
+<tr class="row-7 odd">
+	<td class="column-1">Non-availability of Independent Test environment and accessibility</td><td class="column-2">Medium</td><td class="column-3">High</td><td class="column-4">Due to non availability of the environment, the schedule gets impacted and will lead to delayed start of Test execution. </td>
+</tr>
+<tr class="row-8 even">
+	<td class="column-1">Delayed Testing Due To new Issues</td><td class="column-2">Medium</td><td class="column-3">High</td><td class="column-4">During testing, there is a good chance that some “new” defects may be identified and may become an issue that will take time to resolve. <br />
+There are defects that can be raised during testing because of unclear document specification. These defects can yield to an issue that will need time to be resolved. <br />
+If these issues become showstoppers, it will greatly impact on the overall project schedule. <br />
+If new defects are discovered, the defect management and issue management procedures are in place to immediately provide a resolution.<br />
+</td>
+</tr>
+</tbody>
+</table>
+<!-- #tablepress-12 from cache -->
+<p><strong>A few points to note:</strong></p>
+<ol>
+<li>The sooner risk management starts in a QA project planning phase, the better.</li>
+<li>Of all 3 steps, <strong>risk identification is the most important</strong>. If anything is not listed and considered for further steps, the risk goes unhandled.</li>
+<li>Try to find an ideal time frame for this activity. Remember, too much planning leaves too little time for doing.</li>
+<li>Also, after the risk management process, if a new situation comes up, the risk management plan can be altered or updated to reflect the most current condition.</li>
+<li><strong>Historical data</strong> can be very useful for the success of this process.</li>
+</ol>
+<p>&nbsp;</p>
+<h3><strong>Conclusion:</strong></h3>
+<p>This brings us to an end of <a title="Risk based testing part1" href="%20http://www.softwaretestinghelp.com/risk-management-during-test-planning-risk-based-testing/">Risk management (Risk Based Testing) in the Test planning phase</a>. Even though the underlying steps and principle are similar, the risk management process is more concentrated towards the AUT when it happens in the test designing/execution phase.</p>
+<p>Stay tuned for it in our next article – <strong>Risk management in test execution phase.</strong></p>
+<p><strong><em>As always, your comments and questions are most welcome.</em></strong></p>
+<p><em><strong>About the author</strong>: This article series is written by our STH team member Swati S.</em></p>
+<div class='dd_post_share'><div class='dd_buttons'><div class='dd_button'><script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.softwaretestinghelp.com/risk-management-during-test-planning-risk-based-testing/" send="false" show_faces="false"  layout="box_count" width="50"  ></fb:like></div><div class='dd_button'><div class='dd-google1-ajax-load dd-google1-3665'></div><g:plusone size='tall' href='http://www.softwaretestinghelp.com/risk-management-during-test-planning-risk-based-testing/'></g:plusone></div><div class='dd_button'><div class='dd-linkedin-ajax-load dd-linkedin-3665'></div><script type='IN/share' data-url='http://www.softwaretestinghelp.com/risk-management-during-test-planning-risk-based-testing/' data-counter='top'></script></div><div class='dd_button'><div class='dd-twitter-ajax-load dd-twitter-3665'></div><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.softwaretestinghelp.com/risk-management-during-test-planning-risk-based-testing/" data-count="vertical" data-text="How to Manage Risks During Test Planning Phase – Risk Based Testing (Part 1)" data-via="VijayShinde" ></a></div></div><div style='clear:both'></div></div><script type="text/javascript"> jQuery(document).ready(function($) { window.setTimeout('loadGoogle1_3665()',1000);window.setTimeout('loadLinkedin_3665()',1000);window.setTimeout('loadTwitter_3665()',1000); }); </script><script type="text/javascript"> function loadGoogle1_3665(){ jQuery(document).ready(function($) { $('.dd-google1-3665').remove();$.getScript('https://apis.google.com/js/plusone.js'); }); } function loadLinkedin_3665(){ jQuery(document).ready(function($) { $('.dd-linkedin-3665').remove();$.getScript('http://platform.linkedin.com/in.js'); }); } function loadTwitter_3665(){ jQuery(document).ready(function($) { $('.dd-twitter-3665').remove();$.getScript('http://platform.twitter.com/widgets.js'); }); }</script><!-- Social Buttons Generated by Digg Digg plugin v5.3.6,
+    Author : Buffer, Inc
+    Website : http://bufferapp.com/diggdigg -->
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:0px;">
+<br />
+<script type="text/javascript">
+    google_ad_client = "ca-pub-4494420772031453";
+    google_ad_slot = "7153660799";
+    google_ad_width = 200;
+    google_ad_height = 90;
+</script>
+<!-- STH LinkUnit 200x90 Content -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br /><br />
+</div>
+
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div><div class='yarpp-related'>
+<p><h3>Recommended reading only for you:</h3>
+<li><a href="http://www.softwaretestinghelp.com/risk-management-at-test-execution-phase/" rel="bookmark" title="Risk Management at Test Execution Phase Explained with Practical Example (Part 2)">Risk Management at Test Execution Phase Explained with Practical Example (Part 2) </a></li>
+<li><a href="http://www.softwaretestinghelp.com/test-planning-vs-test-execution-phase/" rel="bookmark" title="How Test Planning has Upper Hand than Test Execution Phase?">How Test Planning has Upper Hand than Test Execution Phase? </a></li>
+<li><a href="http://www.softwaretestinghelp.com/types-of-risks-in-software-projects/" rel="bookmark" title="Types of Risks in Software Projects">Types of Risks in Software Projects </a></li>
+<li><a href="http://www.softwaretestinghelp.com/failure-mode-and-effects-analysis-fmea/" rel="bookmark" title="Failure Mode and Effects Analysis (FMEA) – How to Analyze Risks for Better Software Quality &amp; Satisfied Customers!">Failure Mode and Effects Analysis (FMEA) – How to Analyze Risks for Better Software Quality &#038; Satisfied Customers! </a></li>
+<li><a href="http://www.softwaretestinghelp.com/test-project-planning/" rel="bookmark" title="How to Plan and Manage Testing Projects Effectively (Tips)">How to Plan and Manage Testing Projects Effectively (Tips) </a></li>
+<li><a href="http://www.softwaretestinghelp.com/automation-test-palnning/" rel="bookmark" title="How Does Test Planning Differ for Manual and Automation Projects?">How Does Test Planning Differ for Manual and Automation Projects? </a></li>
+<li><a href="http://www.softwaretestinghelp.com/test-execution-software-testing-qa-training-on-a-live-project-day-5/" rel="bookmark" title="Test Execution – How to Deal with this Most Important and Happening Phase in the STLC – QA Training on a Live Project Day 5">Test Execution – How to Deal with this Most Important and Happening Phase in the STLC – QA Training on a Live Project Day 5 </a></li>
+</p>
+</div>
+							</div>
+
+		
+<!-- You can start editing here. -->
+
+
+<div id="comments">
+
+	<h3 class="comment_intro">17 comments &darr;</h3>
+
+	
+	<dl id="comment_list">
+
+			
+		<dt id="comment-99314">
+			<span class="comment_num"><a href="#comment-99314" title="Permalink to this comment">#1</a></span>
+			<strong>smita </strong>
+		</dt>
+		<dd class="entry">
+			<p>which is more important risk management during planning or execution?</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99315">
+			<span class="comment_num"><a href="#comment-99315" title="Permalink to this comment">#2</a></span>
+			<strong>Suresh </strong>
+		</dt>
+		<dd class="entry">
+			<p>risk management is a continuous process throughout the SDLC and STLC. But it would have more positive impact when done at proper stages.</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99320">
+			<span class="comment_num"><a href="#comment-99320" title="Permalink to this comment">#3</a></span>
+			<strong>Zakir </strong>
+		</dt>
+		<dd class="entry">
+			<p>Good post Swati.<br />
+Keep up the good work !!!</p>
+<p>@smitha</p>
+<p>Need to wait and stay tuned to the next article on Risk management in test execution phase which can answer your question <img src="http://cdn2.softwaretestinghelp.com/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99328">
+			<span class="comment_num"><a href="#comment-99328" title="Permalink to this comment">#4</a></span>
+			<strong>kote </strong>
+		</dt>
+		<dd class="entry">
+			<p>Pardon me for my poor english. Where it says &#8220;Holidays and vacation have been estimated&#8221; in the example of mitigation, what exactly does it mean? Does it mean considering working on holidays and vacation if the risk occured?</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99361">
+			<span class="comment_num"><a href="#comment-99361" title="Permalink to this comment">#5</a></span>
+			<strong>Swati Seela </strong>
+		</dt>
+		<dd class="entry">
+			<p>@smita: Both are important and really worth the time. RM at Test planning is almost compulsory.</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99362">
+			<span class="comment_num"><a href="#comment-99362" title="Permalink to this comment">#6</a></span>
+			<strong>Swati Seela </strong>
+		</dt>
+		<dd class="entry">
+			<p>@Suresh: A great observation. Thank you for sharing it with us</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99363">
+			<span class="comment_num"><a href="#comment-99363" title="Permalink to this comment">#7</a></span>
+			<strong>Swati Seela </strong>
+		</dt>
+		<dd class="entry">
+			<p>@kote: nope, it means planning has been thorough to include holidays and vacation times &#8211; this means schedule variance(if any)will occur only due to unforeseen issues, but not due to slip-ups during planning. Hope that makes sense.</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99385">
+			<span class="comment_num"><a href="#comment-99385" title="Permalink to this comment">#8</a></span>
+			<strong>Amruta Wable </strong>
+		</dt>
+		<dd class="entry">
+			<p>Thank you for this post,its really nice and understand to read risk testing,can you please send me some points about SDLC</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99525">
+			<span class="comment_num"><a href="#comment-99525" title="Permalink to this comment">#9</a></span>
+			<strong>kote </strong>
+		</dt>
+		<dd class="entry">
+			<p>@Swati: sorry for not writing back sooner. I&#8217;ve been away in a while with limited Internet access. Thank you for the elaboration. I now have a clear idea!</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99555">
+			<span class="comment_num"><a href="#comment-99555" title="Permalink to this comment">#10</a></span>
+			<strong>Rajahmix </strong>
+		</dt>
+		<dd class="entry">
+			<p>This was the wonderful post, it taught me a lot about risk management especially during test planning process.</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99673">
+			<span class="comment_num"><a href="#comment-99673" title="Permalink to this comment">#11</a></span>
+			<strong>Rajesh </strong>
+		</dt>
+		<dd class="entry">
+			<p>Hi,</p>
+<p>The article is good. I have few points to add and how do we mitigate them?. Also, I suggest to identify the maximum risks during test planning phase and document them in Test Plan before requirements review is completed.<br />
+1. Schedule risk &#8211; requirements got delayed and it has subsequent effect on next tasks like development design/coding, testing.<br />
+2. Test Environment Risk &#8211; Coding is completed and build is ready to be deployed in test areas but test areas are not yet setup.<br />
+3. Resources Risk &#8211; The resources planned for testing have resigned from organization during the peak testing phase and they carryout lot of functional knowledge.<br />
+4. Communication Risk &#8211; There is an communication misunderstanding/problem among requirement engineers, development and testing teams.<br />
+5. Product Risk &#8211; If two simultaneous releases are planned to merge at the end of testing phase. Due to the issues identified in release that affects the other &#8211; the product is under RISK if gets released. The management has to take decision on it.</p>
+<p>Do let me know your comments on this.</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99761">
+			<span class="comment_num"><a href="#comment-99761" title="Permalink to this comment">#12</a></span>
+			<strong><a href='http://www.softwaretestinghelp.com' rel='external nofollow' class='url'>Swati Seela</a> </strong>
+		</dt>
+		<dd class="entry">
+			<p>@Rajesh: It is a great question. Risk analysis and planning is a preventive activity but it does not mean it will remove the risk altogether. So, all the situations you mentioned are possible in which we have an issue. </p>
+<p>Most issues in IT projects are collective decisions. When these issues do come up- it means its time to sit together and come up with a alternate plan or workaround.</p>
+<p>Risk management prepares us to an extent, but the rest of it is still up to the forces of nature <img src="http://cdn2.softwaretestinghelp.com/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-99861">
+			<span class="comment_num"><a href="#comment-99861" title="Permalink to this comment">#13</a></span>
+			<strong>Srinath </strong>
+		</dt>
+		<dd class="entry">
+			<p>Its great explanation for @ Swati Seela</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-100229">
+			<span class="comment_num"><a href="#comment-100229" title="Permalink to this comment">#14</a></span>
+			<strong>Ramesh Bestha </strong>
+		</dt>
+		<dd class="entry">
+			<p>Its great explanation of Risk management for Testing</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-100415">
+			<span class="comment_num"><a href="#comment-100415" title="Permalink to this comment">#15</a></span>
+			<strong>Sarita Bennett </strong>
+		</dt>
+		<dd class="entry">
+			<p>Outstanding posting; thanks Swati!  Thanks Rajesh for your comments and points.  I too thought of identifying the maximum risk during the initial test plan and modify throughout the SDLC&#8230;</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-101327">
+			<span class="comment_num"><a href="#comment-101327" title="Permalink to this comment">#16</a></span>
+			<strong>sarvesh </strong>
+		</dt>
+		<dd class="entry">
+			<p>Hi,<br />
+very good post on Risk management. Thanks.<br />
+Could I request you to add more in Mitigation plan ? I can see risk/problem is again explained in mitigation plan. Mitigation is to resolve the problem if occurred. i.e. Scope not defined, environment not available, changing requirements.</p>
+<p>Thanks,</p>
+ 
+					</dd>
+		
+			
+		<dt id="comment-102864">
+			<span class="comment_num"><a href="#comment-102864" title="Permalink to this comment">#17</a></span>
+			<strong>Vinod </strong>
+		</dt>
+		<dd class="entry">
+			<p>Thanks a lot Swati, this article was really helpful.</p>
+ 
+					</dd>
+		
+		
+	</dl>
+		
+	
+	<!-- Comment Form -->
+		
+		
+			<h3 id="respond">Leave a Comment</h3>
+			<form action="http://www.softwaretestinghelp.com/wp-comments-post.php" method="post" id="comment_form">
+			
+										<p><input class="text_input" type="text" name="author" id="author" value="" tabindex="1" /><label for="author"><strong>Name</strong></label></p>
+				<p><input class="text_input" type="text" name="email" id="email" value="" tabindex="2" /><label for="email"><strong>Mail</strong></label></p>
+				<p><input class="text_input" type="text" name="url" id="url" value="" tabindex="3" /><label for="url"><strong>Website (Optional)</strong></label></p>
+							<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+			
+				<p><textarea class="text_input text_area" name="comment" id="comment" rows="7" tabindex="4"></textarea></p>
+			
+							
+				<p>
+					<input name="submit" class="form_submit" type="submit" id="submit" tabindex="5" value="Submit" />
+					<input type="hidden" name="comment_post_ID" value="3665" />
+				</p>
+		
+
+				<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="530a630097" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="221"/></p>	
+			</form>
+		
+</div> <!-- Close #comments container -->
+	
+
+				
+		</div>
+		
+		<div id="sidebar">
+	
+<ul class="sidebar_list">
+
+<li id="text-34" class="widget widget_text">			<div class="textwidget"><div class="AW-Form-826831832"></div>
+<script type="text/javascript">(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//forms.aweber.com/form/32/826831832.js";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, "script", "aweber-wjs-ilmyyvaz4"));
+</script>
+<br /><br />
+<strong>Or Subscribe via RSS</strong><br />
+<a href="http://feeds.feedburner.com/Softwaretestinghelp"><img src="http://feeds.feedburner.com/~fc/Softwaretestinghelp?bg=000000&fg=ffffff&anim=1" height="26" width="88" style="border:0" alt="" /></a><a href="http://feeds.feedburner.com/Softwaretestinghelp"><img src="http://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2010/12/Software-Testing-Help-RSS-Feed.png" alt="Software Testing Help RSS Feed"/></a>
+</div>
+		</li><li id="text-27" class="widget widget_text"><h2>Best Online Training</h2>			<div class="textwidget"><a href="http://www.softwaretestinghelp.org/" target="_blank">
+<img src="http://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2014/06/sth-testing-courses.gif" alt="Software Testing Online Training Course" width="180" height="140"></a>
+<br /><br />
+<a href="http://www.softwaretestinghelp.com/we-are-hiring-talented-software-testing-trainers/"><img src="http://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2014/07/expert-trainers-new.jpg" height="104" width="180" style="border:0" alt="Software Testing Trainer Jobs" /></a></div>
+		</li><li id="text-33" class="widget widget_text"><h2>Recommended eBook</h2>			<div class="textwidget">Learn & Master Software Testing Quickly from Experts <b><a href="http://www.softwaretestinghelp.org/software-testing-help-ebook-new/?utm_source=STH&utm_medium=content&utm_campaign=sthsidelink" target="_blank"> Click here to know more.</a></b><br /><br />
+<a href="http://www.softwaretestinghelp.org/software-testing-help-ebook-new/?utm_source=STH&utm_medium=content&utm_campaign=sthside" target="_blank"><img src="http://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2013/10/sth-new-ebook-1.jpg" alt="Software Testing eBook" height="178" width="188" /></a></div>
+		</li><li id="wp125-2" class="widget widget_wp125">
+<h2>Adverts</h2><div id="wp125adwrap_1c">
+<div class="wp125ad odd"><a href="index.php?adclick=6" title="TestLodge" rel="nofollow" target="_blank"><img src="http://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2014/07/TestLodge180x150.jpg" alt="TestLodge" /></a></div>
+<div class="wp125ad even"><a href="index.php?adclick=3" title="Radview" rel="nofollow" target="_blank"><img src="http://cdn2.softwaretestinghelp.com/wp-content/qa/uploads/2014/10/webload.jpg" alt="Radview" /></a></div>
+<div class="wp125ad odd"><a href="index.php?adclick=9" title="PractiTest" rel="nofollow" target="_blank"><img src="http://cdn2.softwaretestinghelp.com/wp-content/qa/uploads/2015/04/Practitest-banner180x150.jpg" alt="PractiTest" /></a></div>
+<div class="wp125ad even"><a href="index.php?adclick=7" title="Zephyragile" rel="nofollow" target="_blank"><img src="http://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2015/02/free-agile-180x150.jpg" alt="Zephyragile" /></a></div>
+</div>
+</li><li id="text-36" class="widget widget_text">			<div class="textwidget"><p>
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1279353" class="bsarocks bsap_56ab2c9b507d9fc752d33e963c68be68"></div>
+<!-- End BuySellAds Zone Code -->
+</p>
+<p>
+<!-- BuySellAds.com Zone Code -->
+<div id="bsap_1244387" class="bsarocks bsap_56ab2c9b507d9fc752d33e963c68be68"></div>
+<!-- End BuySellAds.com Zone Code -->
+</p>
+<p>
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1300334" class="bsarocks bsap_56ab2c9b507d9fc752d33e963c68be68"></div>
+<!-- End BuySellAds Zone Code -->
+</p>
+</div>
+		</li>	</ul>
+</div>			
+	</div>
+
+	<div id="left">
+	<ul class="sidebar_list">
+		<li id="text-28" class="widget widget_text">			<div class="textwidget"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-4494420772031453";
+/* STH_LinkUnit_LeftSidebar */
+google_ad_slot = "4380433686";
+google_ad_width = 180;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+		</li><li id="nav_menu-3" class="widget widget_nav_menu"><h2>START HERE!</h2><div class="menu-start-here-container"><ul id="menu-start-here" class="menu"><li id="menu-item-654" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-654"><a title="Software Testing Home" href="http://www.softwaretestinghelp.com/">Home</a></li>
+<li id="menu-item-1747" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1747"><a href="http://www.softwaretestinghelp.com/subscribe/">Get FREE Updates</a></li>
+<li id="menu-item-1548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1548"><a title="Testing RESOURCES" href="http://www.softwaretestinghelp.com/resources/">Testing RESOURCES</a></li>
+<li id="menu-item-1552" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1552"><a title="QA Testing TRAINING" href="http://www.softwaretestinghelp.org/?utm_campaign=sthmenu">QA Testing TRAINING</a></li>
+<li id="menu-item-1554" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1554"><a href="http://www.softwaretestinghelp.org/software-testing-help-ebook-new/?utm_campaign=sthmenu">Premium eBook</a></li>
+<li id="menu-item-1070" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1070"><a title="FREE eBooks" href="http://www.softwaretestinghelp.com/practical-software-testing-new-free-ebook-download/">FREE eBooks</a></li>
+<li id="menu-item-2486" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2486"><a href="http://www.softwaretestinghelp.com/sitemap/">ALL Articles</a></li>
+<li id="menu-item-1550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1550"><a href="http://www.softwaretestinghelp.com/contact/">Contact Us</a></li>
+<li id="menu-item-3301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3301"><a href="http://www.softwaretestinghelp.com/what-our-readers-say-about-us/">What Readers Say About Us</a></li>
+<li id="menu-item-2092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2092"><a href="http://goo.gl/NLdpM">Your Feedback!</a></li>
+<li id="menu-item-3404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3404"><a href="http://forum.softwaretestinghelp.com/index.php?action=register">QA Forum</a></li>
+</ul></div></li><li id="nav_menu-4" class="widget widget_nav_menu"><h2>Help &amp; Tutorials</h2><div class="menu-menu2-container"><ul id="menu-menu2" class="menu"><li id="menu-item-2494" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2494"><a href="http://www.softwaretestinghelp.com/istqb-free-updates/">ISTQB Study Guide</a></li>
+<li id="menu-item-3720" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3720"><a href="http://www.softwaretestinghelp.org/istqb-certification-complete-study-package/">ISTQB Premium Study Guide</a></li>
+<li id="menu-item-3405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3405"><a href="http://www.softwaretestinghelp.com/free-online-software-testing-qa-training-course/">Free QA Training</a></li>
+<li id="menu-item-5066" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5066"><a title="Selenium Online Training" href="http://www.softwaretestinghelp.com/selenium-tutorial-1/">Free Selenium Training</a></li>
+<li id="menu-item-2495" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2495"><a href="http://www.softwaretestinghelp.com/qtp-quicktest-professional-tutorial-1/">Free QTP Training</a></li>
+<li id="menu-item-2496" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2496"><a href="http://www.softwaretestinghelp.com/learn-hp-quality-center-qc-in-4-days/">Free QC Training</a></li>
+<li id="menu-item-3171" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3171"><a href="http://www.softwaretestinghelp.com/hp-loadrunner-load-testing-tool-training-tutorials/">HP LoadRunner Tutorials</a></li>
+<li id="menu-item-3406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3406"><a href="http://www.softwaretestinghelp.com/atlassian-jira-tutorial-1/">JIRA Tutorials</a></li>
+<li id="menu-item-2497" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2497"><a href="http://www.softwaretestinghelp.com/software-testing-interview-questions/">101+ Interview Questions</a></li>
+</ul></div></li><li id="text-37" class="widget widget_text">			<div class="textwidget"><script type="text/javascript">
+    google_ad_client = "ca-pub-4494420772031453";
+    google_ad_slot = "1008701996";
+    google_ad_width = 200;
+    google_ad_height = 90;
+</script>
+<!-- STH LinkUnit 200x90 new -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+		</li><li id="categories-2" class="widget widget_categories"><h2>Categories</h2><label class="screen-reader-text" for="cat">Categories</label><select name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="70">Agile Testing</option>
+	<option class="level-0" value="8">Automation Testing</option>
+	<option class="level-0" value="3">Basics of Software testing</option>
+	<option class="level-0" value="48">Bug Defect tracking</option>
+	<option class="level-0" value="51">Career in software Testing</option>
+	<option class="level-0" value="59">Cookie Testing</option>
+	<option class="level-0" value="75">Database Testing</option>
+	<option class="level-0" value="72">Game Testing</option>
+	<option class="level-0" value="1">General</option>
+	<option class="level-0" value="78">GUI Testing</option>
+	<option class="level-0" value="42">How to be a good tester</option>
+	<option class="level-0" value="202">HP Quality Center</option>
+	<option class="level-0" value="58">Installation Testing</option>
+	<option class="level-0" value="53">ISO standards</option>
+	<option class="level-0" value="74">ISTQB Certification</option>
+	<option class="level-0" value="212">LoadRunner Tutorials</option>
+	<option class="level-0" value="71">Manual Testing</option>
+	<option class="level-0" value="213">Mobile Testing</option>
+	<option class="level-0" value="32">QA certifications</option>
+	<option class="level-0" value="76">QA forum</option>
+	<option class="level-0" value="67">QA leadership</option>
+	<option class="level-0" value="62">QA team skills</option>
+	<option class="level-0" value="33">QA Test engineers Payscale</option>
+	<option class="level-0" value="61">QTP Tutorials</option>
+	<option class="level-0" value="56">Quality assurance</option>
+	<option class="level-0" value="60">Questions &amp; answers</option>
+	<option class="level-0" value="201">Reviews</option>
+	<option class="level-0" value="69">Security testing</option>
+	<option class="level-0" value="214">Selenium Tutorials</option>
+	<option class="level-0" value="65">Soft skills for testers</option>
+	<option class="level-0" value="35">Software Job Openings</option>
+	<option class="level-0" value="68">Software Testing Books</option>
+	<option class="level-0" value="39">Software Testing Events</option>
+	<option class="level-0" value="38">software testing links</option>
+	<option class="level-0" value="77">Software Testing Resume</option>
+	<option class="level-0" value="24">Software Testing Templates</option>
+	<option class="level-0" value="73">Software Testing Tools</option>
+	<option class="level-0" value="209">Software Testing Training</option>
+	<option class="level-0" value="205">Test Management Tools</option>
+	<option class="level-0" value="13">Test Plan Template</option>
+	<option class="level-0" value="4">Test strategy</option>
+	<option class="level-0" value="34">Tester vs Developer</option>
+	<option class="level-0" value="63">Testing best practices</option>
+	<option class="level-0" value="66">Testing Concepts</option>
+	<option class="level-0" value="40">Testing Interview questions</option>
+	<option class="level-0" value="54">Testing Life cycle</option>
+	<option class="level-0" value="211">Testing Methodologies</option>
+	<option class="level-0" value="64">Testing News</option>
+	<option class="level-0" value="52">Testing Skill Improvement</option>
+	<option class="level-0" value="44">Testing Tips and resources</option>
+	<option class="level-0" value="215">Testing Web Services</option>
+	<option class="level-0" value="55">Types of testing</option>
+	<option class="level-0" value="23">Web Testing</option>
+	<option class="level-0" value="57">Winrunner</option>
+	<option class="level-0" value="50">Write For Us</option>
+</select>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			location.href = "http://www.softwaretestinghelp.com/?cat=" + dropdown.options[ dropdown.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+</li><li id="text-32" class="widget widget_text"><h2>Follow Us!</h2>			<div class="textwidget"><p>
+<a href="https://twitter.com/VijayShinde" class="twitter-follow-button" data-show-count="false">Follow @VijayShinde</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</p>
+<p>
+<div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/u/0/111004776156228358214" data-rel="publisher"></div>
+</p>
+<p>
+<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FSoftwareTestingHelp&amp;width=195&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:195px; height:90px;" allowTransparency="true"></iframe>
+</p>
+<br />
+<script type="text/javascript">
+    google_ad_client = "ca-pub-4494420772031453";
+    google_ad_slot = "0787229142";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<!-- STH_160x600 -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+		</li>		<li id="recent-posts-3" class="widget widget_recent_entries">		<h2>Latest Articles!</h2>		<ul>
+					<li>
+				<a href="http://www.softwaretestinghelp.com/soapui-tutorial-12-soapui-pro-features/">4 Important Features of SoapUI Pro for Pro Audience – SoapUI Tutorial #12</a>
+						</li>
+					<li>
+				<a href="http://www.softwaretestinghelp.com/soapui-tutorial-11-exception-handling-in-soapui-groovy-scripts/">How to Handle Exception in SoapUI Groovy Scripts – SoapUI Tutorial #11</a>
+						</li>
+					<li>
+				<a href="http://www.softwaretestinghelp.com/soapui-tutorial-10-use-methods-in-soapui-for-bulk-test-execution/">How to Use Methods in SoapUI for Bulk Test Execution &#8211; SoapUI Tutorial #10</a>
+						</li>
+					<li>
+				<a href="http://www.softwaretestinghelp.com/soapui-tutorial-9-groovy-scripting-concepts/">Learn Advanced SoapUI Groovy Scripting Concepts &#8211; SoapUI Tutorial #9</a>
+						</li>
+					<li>
+				<a href="http://www.softwaretestinghelp.com/soapui-tutorial-8-working-with-soapui-properties/">Working with SoapUI Properties &#8211; SoapUI Tutorial #8</a>
+						</li>
+					<li>
+				<a href="http://www.softwaretestinghelp.com/soapui-tutorial-7-properties-in-soapui-groovy-script/">How to Use Properties in SoapUI Groovy Script &#8211; SoapUI Tutorial #7</a>
+						</li>
+					<li>
+				<a href="http://www.softwaretestinghelp.com/soapui-tutorial-6-write-groovy-script-in-soapui/">How to Write Basic Groovy Script in SoapUI &#8211; SoapUi Tutorial #6</a>
+						</li>
+				</ul>
+		</li>
+ </ul>	
+</div>
+</div>
+
+<div id="footer">
+<div align="center">
+<p>
+<form action="http://www.google.com" id="cse-search-box" target="_blank">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-4494420772031453:2717605672" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="30" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+</p>
+<br />
+<p><a href="http://www.softwaretestinghelp.com/about/">About us</a> | <a href="http://www.softwaretestinghelp.com/sitemap/">Sitemap</a> | <a href="http://www.softwaretestinghelp.com/contact/">Contact us</a> | <a href="http://www.softwaretestinghelp.com/jobs/">Find Jobs</a> | <a href="http://www.softwaretestinghelp.com/software-testing-directory/">Directory</a> | <a href="http://www.softwaretestinghelp.com/software-testing-help-affiliate-program/">Affiliates</a> | <a href="http://www.softwaretestinghelp.com/advertise-on-software-testing-help/">Advertise</a><br /><br /> 
+<strong>All articles are copyrighted and can not be reproduced without permission.</strong><br /><br />
+</p>
+</div>
+<p><a href="http://www.softwaretestinghelp.com/copyright-policy/" target="_blank"><img src="http://cdn2.softwaretestinghelp.com/wp-content/qa/uploads/2013/01/copyright-sth.jpg" height="17" width="178" style="border:0" alt="ALL RIGHTS RESERVED. DO NOT COPY" /></a> &copy; 2006 - 2015 Software Testing Help &#8212; Read our <a href="http://www.softwaretestinghelp.com/copyright-policy/"> Copyright Policy</a> | <a href="http://www.softwaretestinghelp.com/privacy/">Privacy Policy</a> | <a href="http://www.softwaretestinghelp.com/link-to-us/">Link to Us</a></p><br /><br />
+	<!-- Powered by WPtouch: 3.7.9.1 --><script type='text/javascript' src='http://cdn.softwaretestinghelp.com/wp-content/plugins/akismet/_inc/form.js?ver=3.1.2'></script>
+<link rel='stylesheet' id='yarppRelatedCss-css'  href='http://cdn2.softwaretestinghelp.com/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=4.2.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://cdn.softwaretestinghelp.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.softwaretestinghelp.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://cdn2.softwaretestinghelp.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.2'></script>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1357330-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.390 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-06-09 03:01:18 -->
+
+<!-- super cache -->
